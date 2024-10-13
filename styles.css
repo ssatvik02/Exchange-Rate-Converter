@@ -1,0 +1,215 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+body{
+    background: linear-gradient(47deg,#020024,#090979,#00d4ff);
+    background-size: 180% 180%;
+    animation: gradient-animation 16s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+:root {
+  /* colors */
+  --blue: #207dff;
+  --blue-dark: #006aff;
+  --primary: #213363;
+  --secondary: #2f58cd;
+  --secondary-dark: #1249df;
+  --light: #ffffff;
+  --light-2: #f1f1f1;
+  --dark: #222222;
+  --grey: #888888;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+
+.currency-converter {
+  width: 400px;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: var(--light);
+  }
+
+.currency-converter h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.currency-converter .form {
+  position: relative;
+}
+
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-field .info {
+  display: flex;
+  align-items: center;
+}
+
+.info img {
+  height: 45px;
+}
+
+.info select {
+  color: var(--blue);
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.info select option {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* width */
+.info select::-webkit-scrollbar {
+  width: 7px;   
+}
+
+/* Track */
+.info select::-webkit-scrollbar-track {
+  background: var(--light-2);
+}
+
+/* Handle */
+.info select::-webkit-scrollbar-thumb {
+  background: var(--grey);
+}
+
+/* Handle on hover */
+.info select::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+  border-radius: 5px;
+}
+
+.form-field .amount,
+.form-field .result {
+  padding-left: 50px;
+}
+
+.amount input,
+.result {
+  width: 100%;
+  border: none;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--dark);
+  outline: none;
+}
+
+.amount input::placeholder {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* margin: 0; */
+}
+
+.form .icon {
+  position: relative;
+  margin: 0 1rem;
+  border-top: 1px solid grey;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.icon i {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  text-align: center;
+  color: var(--light);
+  font-size: 1.3rem;
+    background-color: var(--blue);
+  transition: all 0.2s;
+
+}
+
+.icon i:active,
+.icon i:focus {
+  transform: translateY(-50%) rotate(90deg) scale(0.9);
+}
+
+.form .buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons button {
+  flex: 0.5;
+  padding: 10px 16px;
+  font-size: 1rem;
+  color: var(--light);
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+.buttons .clear {
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+}
+
+.buttons .clear:hover {
+  border: 1px solid var(--blue-dark);
+  background-color: var(--blue-dark);
+
+}
+
+.buttons .rate {
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary);
+
+}
+
+.buttons .rate:hover {
+  border: 1px solid var(--secondary-dark);
+  background-color: var(--secondary-dark);
+}
